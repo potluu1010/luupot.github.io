@@ -9,6 +9,45 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <style>
+    body {font-family: Arial;}
+    /* Style the tab */
+    .tab
+    float:left;
+      width: 876px;
+      height: 960px;
+      overflow: hidden;
+      border: 1px solid none;
+      background-color: #808080;
+    }
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: black;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ccc;
+    }
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      float: right;
+      padding: 250px 50px;
+      border-top: 40px
+    ;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,22 +68,60 @@
       </ul>
     </div>
   </div>
-    <div class="container-new">
-    <div class="content-new"></div>
-        <h1><center><span>Bài tập thực hành</span></center></h1>
+    <div id="content_header"></div>
+    <div id="site_content">
+        <div id="sidebar">
 
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, &#39;Requirements&#39;)" id="defaultOpen"><h4>Lab1</h4></button>
-            <button class="tablinks" onclick="openCity(event, &#39;Design&#39;)"><h4>Lab2</h4></button>
-            <button class="tablinks active" onclick="openCity(event, &#39;Implement&#39;)"><h4>Lab3</h4></button>
+          <h1><center><span>Exercise</span></center></h1>
 
-        </div>
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, &#39;Requirements&#39;)" id="defaultOpen">Lab1</button>
+            <button class="tablinks" onclick="openCity(event, &#39;Design&#39;)">lab2</button>
+            <button class="tablinks active" onclick="openCity(event, &#39;Implement&#39;)">lab3</button>
 
-        <div id="Requirements" class="tabcontent" style="display: none;">
+          </div>
+
+          <div id="Requirements" class="tabcontent" style="display: none;">
             <h1><strong></strong><center><strong>Yêu cầu</strong></center></h1>
+            <p><font color:="" "f0323"=""><h3>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ
+              như sinh viên, môn học, giảng viên,… để thiết kế trên phần
+              mềm một chức năng trên web để thêm, sửa, xóa, tìm kiếm
+            cho đối tượng đó.</h3></font></p>
             <br>
             <br>
+            <h1>Design</h1>
+            <img src="17130173_Design/Lab1.jpg" width="500" height="720">
+              <img src="./17130173_Design/lap_1.jpg" width="500" height="720">
+            <center><button style="color: #1C2C3E" >Download
+            </button></center>
+
+
+          </div>
+
+          <div id="Implement" class="tabcontent" style="display: block;">
+
+          </div>
+
+          <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+          </script>
+        </div>
     </div>
+
     <div id="content_footer"></div>
     <div id="footer">
       Copyright &copy; colour_blue | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a>
