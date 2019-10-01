@@ -157,7 +157,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 
 #site_content
 { width: 1157px;
-    height: 0 auto;
+    height: 960px ;
     overflow: hidden;
     margin: 0 auto 0 auto;
     padding: 20px 24px 20px 37px;
